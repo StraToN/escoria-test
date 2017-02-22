@@ -79,7 +79,7 @@ func get_action():
 	return action
 
 func mouse_enter():
-	print("MOUSE ENTER §!!")
+	print("MOUSE ENTER §!! ", get_name())
 	get_tree().call_group(0, "game", "mouse_enter", self)
 	_check_focus(true, false)
 
