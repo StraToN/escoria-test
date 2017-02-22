@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://scenes/rooms/scifi/sci-fi-level[background_layer].png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = Vector2Array( 3298.91, 539.467, -0.591583, 545.649, 4.04474, 490.013, 310.041, 378.742, 571.219, 349.379, 679.4, 354.015, 773.671, 315.379, 1297.57, 350.924, 2969.73, 332.379, 3292.73, 304.561, 2884.73, 392.651, 1799.84, 326.197, 1968.29, 286.016, 2067.2, 363.288, 1229.57, 309.197, 2600.38, 398.833, 1467.57, 327.743, 2206.29, 327.743, 2520.01, 352.47, 1687.02, 309.197 )
+polygons = [ IntArray( 0, 1, 2, 3, 4, 5 ), IntArray( 0, 5, 6, 7 ), IntArray( 8, 9, 0, 10 ), IntArray( 11, 12, 13 ), IntArray( 6, 14, 7 ), IntArray( 15, 0, 7, 16, 13 ), IntArray( 17, 18, 15, 13 ), IntArray( 15, 10, 0 ), IntArray( 11, 13, 16 ), IntArray( 11, 16, 19 ) ]
+outlines = [ Vector2Array( 4.04474, 490.013, 310.041, 378.742, 571.219, 349.379, 679.4, 354.015, 773.671, 315.379, 1229.57, 309.197, 1297.57, 350.924, 1467.57, 327.743, 1687.02, 309.197, 1799.84, 326.197, 1968.29, 286.016, 2067.2, 363.288, 2206.29, 327.743, 2520.01, 352.47, 2600.38, 398.833, 2884.73, 392.651, 2969.73, 332.379, 3292.73, 304.561, 3298.91, 539.467, -0.591583, 545.649 ) ]
+
+[node name="root" type="Node2D"]
+
+__meta__ = { "_edit_lock_":true }
+
+[node name="TextureFrame" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 40.0
+texture = ExtResource( 1 )
+stretch_mode = 0
+
+[node name="Navigation2D" type="Navigation2D" parent="."]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+
