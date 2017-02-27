@@ -1,0 +1,40 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://globals/mask.gd" type="Script" id=1]
+[ext_resource path="res://scenes/rooms/desk/assets/maskInvertAlpha.png" type="Texture" id=2]
+
+[node name="masks" type="Node2D"]
+
+script/script = ExtResource( 1 )
+terrainPath = NodePath("../terrain")
+
+[node name="Light2D" type="Light2D" parent="."]
+
+transform/pos = Vector2( 640, 400 )
+z/relative = false
+enabled = true
+editor_only = false
+texture = ExtResource( 2 )
+offset = Vector2( 0, 0 )
+scale = 1.0
+color = Color( 1, 1, 1, 1 )
+energy = 1.0
+mode = 3
+range/height = 0.0
+range/z_min = 1
+range/z_max = 620
+range/layer_min = 0
+range/layer_max = 0
+range/item_mask = 1
+shadow/enabled = false
+shadow/color = Color( 0, 0, 0, 0 )
+shadow/buffer_size = 2048
+shadow/esm_multiplier = 80.0
+shadow/item_mask = 524288
+__meta__ = { "_edit_lock_":true }
+
+[node name="front_pos" type="Position2D" parent="Light2D"]
+
+transform/pos = Vector2( 52.108, 220.244 )
+
+

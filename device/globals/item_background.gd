@@ -76,7 +76,7 @@ func activate(p_action, p_param = null):
 	return true
 
 func get_action():
-	return action
+	return action 
 
 func mouse_enter():
 	get_tree().call_group(0, "game", "mouse_enter", self)
@@ -86,7 +86,7 @@ func mouse_exit():
 	get_tree().call_group(0, "game", "mouse_exit", self)
 	_check_focus(false, false)
 
-func input(event):
+func input(viewport, event, shape_idx):
 	if event.type == InputEvent.MOUSE_BUTTON || event.is_action("ui_accept"):
 		if event.is_pressed():
 			get_tree().call_group(0, "game", "clicked", self, get_pos())
@@ -321,7 +321,8 @@ func setup_ui_anim():
 	vm.connect("global_changed", self, "global_changed")
 
 func _ready():
-
+	add_to_group("items_bg")
+	
 	if get_tree().is_editor_hint():
 		return
 

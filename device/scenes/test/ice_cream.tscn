@@ -31,6 +31,5 @@ interact_angle = -1
 talk_animation = "talk"
 active = true
 placeholders = {  }
-use_custom_z = false
 
 

@@ -1,0 +1,12 @@
+:pick_up
+
+set_global i/inv_shelf true
+set_active shelf false
+
+set_state bg_music off
+
+:look
+
+say player "A shelf"
+
+set_state bg_music "res://scenes/test/dog_splash_theme.ogg"
