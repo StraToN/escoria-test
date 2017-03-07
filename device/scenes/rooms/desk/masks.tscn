@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=4 format=1]
 
 [ext_resource path="res://globals/mask.gd" type="Script" id=1]
 [ext_resource path="res://scenes/rooms/desk/assets/maskInvertAlpha.png" type="Texture" id=2]
+[ext_resource path="res://globals/mask_light2d.gd" type="Script" id=3]
 
 [node name="masks" type="Node2D"]
 
@@ -31,7 +32,11 @@ shadow/color = Color( 0, 0, 0, 0 )
 shadow/buffer_size = 2048
 shadow/esm_multiplier = 80.0
 shadow/item_mask = 524288
+script/script = ExtResource( 3 )
 __meta__ = { "_edit_lock_":true }
+terrain_nodepath = null
+front_pos = null
+use_custom_z = false
 
 [node name="front_pos" type="Position2D" parent="Light2D"]
 
